@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Server</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    .box {
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 50px;
+      color: #00ff99;
+    }
+    .ip {
+      font-size: 30px;
+      margin: 20px;
+      background: #222;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 20px;
+      border: none;
+      background: #00ff99;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>My Minecraft Server</h1>
+    <div class="ip" id="ip">your-ip-here</div>
+    <br>
+    <button onclick="copyIP()">Скопировать IP</button>
+  </div>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById("ip").innerText;
+      navigator.clipboard.writeText(ip);
+      alert("IP скопирован!");
+    }
+  </script>
+</body>
+</html>
